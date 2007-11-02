@@ -1,0 +1,108 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B77DDEAC-6A13-4AA7-8C99-CD4234F7B105}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlayingWithActiveReports.Core</RootNamespace>
+    <AssemblyName>PlayingWithActiveReports.Core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\active.reports\ActiveReports.Viewer3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.0.397, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\active.reports\ActiveReports3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Answer.cs" />
+    <Compile Include="Domain\IAnswer.cs" />
+    <Compile Include="Domain\IQuestion.cs" />
+    <Compile Include="Dto\DisplayReportQuestionDto.cs" />
+    <Compile Include="Reports\IMainReport.cs" />
+    <Compile Include="Reports\IReportFooter.cs" />
+    <Compile Include="Reports\IReportHeader.cs" />
+    <Compile Include="Reports\IReportParameter.cs" />
+    <Compile Include="Reports\IReportSection.cs" />
+    <Compile Include="Reports\IResultsReport.cs" />
+    <Compile Include="Reports\IResultsSection.cs" />
+    <Compile Include="Reports\ISectionBuilder.cs" />
+    <Compile Include="Reports\ISpecification.cs" />
+    <Compile Include="Reports\MainReport.cs" />
+    <Compile Include="Reports\ReportFooterAdapter.cs" />
+    <Compile Include="Reports\ReportHeaderAdapter.cs" />
+    <Compile Include="Reports\ReportParameter.cs" />
+    <Compile Include="Reports\ReportSection.cs" />
+    <Compile Include="Reports\ResultsReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ResultsReport.Designer.cs">
+      <DependentUpon>ResultsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ResultsSection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ResultsSection.Designer.cs">
+      <DependentUpon>ResultsSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ResultsSectionBuilder.cs" />
+    <Compile Include="Reports\Specification.cs" />
+    <Compile Include="Repositories\IQuestionBank.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\Question.cs" />
+    <Compile Include="Repositories\QuestionBank.cs" />
+    <Compile Include="Task\IResultSectionTask.cs" />
+    <Compile Include="Task\IResultsReportTask.cs" />
+    <Compile Include="Task\StubResultsReportTask.cs" />
+    <Compile Include="View\IReportViewer.cs" />
+    <Compile Include="View\IResultsReportView.cs" />
+    <Compile Include="View\ResultsReportPresenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\ResultsReport.resx">
+      <DependentUpon>ResultsReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ResultsSection.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResultsSection.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

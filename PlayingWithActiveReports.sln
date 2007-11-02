@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayingWithActiveReports.Win.UI", "src\app\PlayingWithActiveReports.Win.UI\PlayingWithActiveReports.Win.UI.csproj", "{09E6C76E-17AD-46F8-B09D-2C140942C9E5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayingWithActiveReports.Test", "src\test\PlayingWithActiveReports.Test\PlayingWithActiveReports.Test.csproj", "{BCAE3D41-051A-4D7B-8EBE-7604242621A8}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayingWithActiveReports.Core", "src\app\PlayingWithActiveReports.Core\PlayingWithActiveReports.Core.csproj", "{B77DDEAC-6A13-4AA7-8C99-CD4234F7B105}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ci", "ci", "{6795510D-E3C6-471E-9C97-675890C3017D}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		project.build = project.build
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09E6C76E-17AD-46F8-B09D-2C140942C9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E6C76E-17AD-46F8-B09D-2C140942C9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E6C76E-17AD-46F8-B09D-2C140942C9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E6C76E-17AD-46F8-B09D-2C140942C9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAE3D41-051A-4D7B-8EBE-7604242621A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCAE3D41-051A-4D7B-8EBE-7604242621A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCAE3D41-051A-4D7B-8EBE-7604242621A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAE3D41-051A-4D7B-8EBE-7604242621A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77DDEAC-6A13-4AA7-8C99-CD4234F7B105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77DDEAC-6A13-4AA7-8C99-CD4234F7B105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77DDEAC-6A13-4AA7-8C99-CD4234F7B105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77DDEAC-6A13-4AA7-8C99-CD4234F7B105}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
